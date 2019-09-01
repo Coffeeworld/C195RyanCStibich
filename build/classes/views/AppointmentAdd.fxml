@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="624.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AppointmentAddController">
+   <children>
+      <Label layoutX="169.0" layoutY="31.0" text="Add Appointment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" layoutX="20.0" layoutY="77.0" prefHeight="469.0" prefWidth="446.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <Label text="Appointment ID" />
+                  <Label text="Customer ID" />
+                  <Label text="Consultant ID" />
+                  <Label text="Title" />
+                  <Label text="Description" />
+                  <Label text="Location" />
+                  <Label text="Contact" />
+                  <Label text="Type" />
+                  <Label text="URL" />
+                  <Label text="Start Date" />
+                  <Label text="Start Time" />
+                  <Label text="End" />
+                  <Label text="End Time" />
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </VBox>
+            <VBox prefHeight="382.0" prefWidth="258.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="aptID" editable="false" />
+                  <ChoiceBox fx:id="customerID" prefWidth="150.0" />
+                  <ChoiceBox fx:id="userID" prefWidth="150.0" />
+                  <TextField fx:id="title" promptText="Title" />
+                  <TextField fx:id="description" promptText="Description" />
+                  <TextField fx:id="location" promptText="Location" />
+                  <TextField fx:id="contact" promptText="Contact" />
+                  <TextField fx:id="type" promptText="Type" />
+                  <TextField fx:id="url" promptText="URL" />
+                  <DatePicker fx:id="start" promptText="Start" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="startHour" prefWidth="150.0" promptText="hh" />
+                        <ComboBox fx:id="startMin" prefWidth="150.0" promptText="mm" />
+                     </children>
+                  </HBox>
+                  <DatePicker fx:id="end" promptText="End" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="endHour" prefWidth="150.0" promptText="hh" />
+                        <ComboBox fx:id="endMin" prefWidth="150.0" promptText="mm" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button fx:id="backButton" layoutX="60.0" layoutY="571.0" mnemonicParsing="false" onAction="#backButtonPushed" text="Back" />
+      <Button fx:id="submitButton" layoutX="372.0" layoutY="571.0" mnemonicParsing="false" onAction="#submitButtonPushed" text="Submit" />
+   </children>
+</AnchorPane>
